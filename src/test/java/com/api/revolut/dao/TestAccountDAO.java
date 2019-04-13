@@ -16,8 +16,7 @@ import static junit.framework.TestCase.assertTrue;
 
 public class TestAccountDAO {
 
-    private static final DAOFactory h2DaoFactory =
-            DAOFactory.getDAOFactory(DAOFactory.H2);
+    private static final DAOFactory h2DaoFactory = DAOFactory.getDAOFactory(DAOFactory.H2);
 
     @BeforeClass
     public static void setup() {
@@ -27,7 +26,6 @@ public class TestAccountDAO {
 
     @After
     public void tearDown() {
-
     }
 
     @Test
@@ -84,6 +82,7 @@ public class TestAccountDAO {
         int rowsUpdated = h2DaoFactory.getAccountDAO().updateAccountBalance(1L, deltaDeposit);
         assertTrue(rowsUpdated == 1);
         assertTrue(h2DaoFactory.getAccountDAO().getAccountById(1L).getBalance().equals(afterDeposit));
+
         BigDecimal deltaWithDraw = new BigDecimal(-50).setScale(4, RoundingMode.HALF_EVEN);
         BigDecimal afterWithDraw = new BigDecimal(100).setScale(4, RoundingMode.HALF_EVEN);
         int rowsUpdatedW = h2DaoFactory.getAccountDAO().updateAccountBalance(1L, deltaWithDraw);
@@ -100,6 +99,4 @@ public class TestAccountDAO {
         assertTrue(rowsUpdatedW == 0);
 
     }
-
-
 }

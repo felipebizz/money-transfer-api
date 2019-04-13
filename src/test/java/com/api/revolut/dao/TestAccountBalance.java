@@ -22,8 +22,7 @@ import static junit.framework.TestCase.assertTrue;
 public class TestAccountBalance {
 
     private static Logger log = Logger.getLogger(TestAccountDAO.class);
-    private static final DAOFactory h2DaoFactory =
-            DAOFactory.getDAOFactory(DAOFactory.H2);
+    private static final DAOFactory h2DaoFactory = DAOFactory.getDAOFactory(DAOFactory.H2);
     private static final int THREADS_COUNT = 100;
 
     @BeforeClass
@@ -33,10 +32,7 @@ public class TestAccountBalance {
     }
 
     @After
-    public void tearDown() {
-
-    }
-
+    public void tearDown() {}
 
     @Test
     public void testAccountSingleThreadSameCcyTransfer() throws DAOException {
@@ -51,23 +47,20 @@ public class TestAccountBalance {
         long startTime = System.currentTimeMillis();
 
         accountDAO.transferAccountBalance(transaction);
+
         long endTime = System.currentTimeMillis();
 
         log.info("TransferAccountBalance finished, time taken: " + (endTime - startTime) + "ms");
 
         Account accountFrom = accountDAO.getAccountById(3);
-
         Account accountTo = accountDAO.getAccountById(4);
 
         log.debug("Account From: " + accountFrom);
-
         log.debug("Account From: " + accountTo);
 
 
         assertTrue(accountFrom.getBalance().compareTo(new BigDecimal(449.9877).setScale(4, RoundingMode.HALF_EVEN)) == 0);
         assertTrue(accountTo.getBalance().equals(new BigDecimal(550.0123).setScale(4, RoundingMode.HALF_EVEN)));
-
-
     }
 
 

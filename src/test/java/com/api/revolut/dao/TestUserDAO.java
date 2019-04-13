@@ -49,33 +49,33 @@ public class TestUserDAO {
 
     @Test
     public void testGetNonExistingUserByName() throws DAOException {
-        User u = h2DaoFactory.getUserDAO().getUserByName("abcdeftg");
+        User u = h2DaoFactory.getUserDAO().getUserByName("john");
         assertTrue(u == null);
     }
 
     @Test
     public void testCreateUser() throws DAOException {
-        User u = new User("liandre", "liandre@gmail.com");
+        User u = new User("fatima", "fatima@gmail.com");
         long id = h2DaoFactory.getUserDAO().insertUser(u);
         User uAfterInsert = h2DaoFactory.getUserDAO().getUserById(id);
-        assertTrue(uAfterInsert.getUserName().equals("liandre"));
-        assertTrue(u.getEmailAddress().equals("liandre@gmail.com"));
+        assertTrue(uAfterInsert.getUserName().equals("fatima"));
+        assertTrue(u.getEmailAddress().equals("fatima@gmail.com"));
     }
 
 
     @Test
     public void testUpdateUser() throws DAOException {
-        User u = new User(1L, "felipebizz", "yanglu@gmail.com");
+        User u = new User(1L, "felipebizz", "felipebizz@gmail.com");
         int rowCount = h2DaoFactory.getUserDAO().updateUser(1L, u);
         //assert one row(user) updated
         assertTrue(rowCount == 1);
-        assertTrue(h2DaoFactory.getUserDAO().getUserById(1L).getEmailAddress().equals("yanglu@gmail.com"));
+        assertTrue(h2DaoFactory.getUserDAO().getUserById(1L).getEmailAddress().equals("felipebizz@gmail.com"));
     }
 
 
     @Test
     public void testUpdateNonExistingUser() throws DAOException {
-        User u = new User(500L, "felipebizz", "yanglu@gmail.com");
+        User u = new User(500L, "james", "james@gmail.com");
         int rowCount = h2DaoFactory.getUserDAO().updateUser(500L, u);
         //assert one row(user) updated
         assertTrue(rowCount == 0);

@@ -18,11 +18,7 @@ public interface AccountDAO {
 
     int deleteAccountById(long accountId) throws DAOException;
 
-    /**
-     * @param accountId   user accountId
-     * @param deltaAmount amount to be debit(less than 0)/credit(greater than 0).
-     * @return no. of rows updated
-     */
+
     int updateAccountBalance(long accountId, BigDecimal deltaAmount) throws DAOException;
 
     int transferAccountBalance(UserTransaction userTransaction) throws DAOException;
