@@ -3,6 +3,15 @@ Design and implement a RESTful API (including data model and the backing impleme
 for money transfers between accounts.
 
 
+### Technologies used 
+
+- JAX-RS API
+- H2 in memory database
+- Log4j 
+- Jetty Container (Test and App)
+- Apache HTTP Client
+
+
 ## How to run  money-transfer-app
 
 Clone from GitHub:
