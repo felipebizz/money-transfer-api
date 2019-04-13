@@ -8,8 +8,9 @@ for money transfers between accounts.
 - JAX-RS API
 - H2 in memory database
 - Log4j 
-- Jetty Container (Test and App)
+- Jetty Container
 - Apache HTTP Client
+- JUnit
 
 
 ## How to run  money-transfer-app
@@ -29,8 +30,8 @@ Executing money-tranfer-app:
 mvn exec:java
 ```
 
-The  app starts a jetty server on localhost port 8084
-An H2 in memory database initialized with some sample user and account data
+The  app starts a jetty server on localhost port 8084.
+A H2 in memory database initialized with some sample user and account data
 To view them use the below URL from browser: 
 ```
 http://localhost:8084/revolut-app/user/felipebizz
