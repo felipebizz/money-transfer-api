@@ -1,4 +1,4 @@
-package com.api.revolut.objectModel;
+package com.api.revolut.model;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
