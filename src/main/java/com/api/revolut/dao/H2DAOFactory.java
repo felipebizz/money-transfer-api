@@ -18,6 +18,7 @@ import java.sql.SQLException;
  * H2 DAO
  */
 public class H2DAOFactory extends DAOFactory {
+
     private static final String h2_driver = PropertiesUtil.getStringProperty("h2_driver");
     private static final String h2_connection_url = PropertiesUtil.getStringProperty("h2_connection_url");
     private static final String h2_user = PropertiesUtil.getStringProperty("h2_user");

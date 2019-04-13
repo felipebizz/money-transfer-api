@@ -1,7 +1,7 @@
 package com.api.revolut.dao;
 
 import com.api.revolut.exception.DAOException;
-import com.api.revolut.objectModel.User;
+import com.api.revolut.model.User;
 
 import java.util.List;
 

@@ -3,7 +3,7 @@ package com.api.revolut.dao.impl;
 import com.api.revolut.dao.H2DAOFactory;
 import com.api.revolut.dao.UserDAO;
 import com.api.revolut.exception.DAOException;
-import com.api.revolut.objectModel.User;
+import com.api.revolut.model.User;
 import org.apache.commons.dbutils.DbUtils;
 import org.apache.log4j.Logger;
 

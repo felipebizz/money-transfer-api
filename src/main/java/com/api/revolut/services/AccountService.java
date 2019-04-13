@@ -2,7 +2,7 @@ package com.api.revolut.services;
 
 import com.api.revolut.dao.DAOFactory;
 import com.api.revolut.exception.DAOException;
-import com.api.revolut.objectModel.Account;
+import com.api.revolut.model.Account;
 import com.api.revolut.utilities.MoneyUtil;
 import org.apache.log4j.Logger;
 

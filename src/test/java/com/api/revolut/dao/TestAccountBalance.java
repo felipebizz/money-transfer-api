@@ -1,8 +1,8 @@
 package com.api.revolut.dao;
 
 import com.api.revolut.exception.DAOException;
-import com.api.revolut.objectModel.Account;
-import com.api.revolut.objectModel.UserTransaction;
+import com.api.revolut.model.Account;
+import com.api.revolut.model.UserTransaction;
 import org.apache.commons.dbutils.DbUtils;
 import org.apache.log4j.Logger;
 import org.junit.After;

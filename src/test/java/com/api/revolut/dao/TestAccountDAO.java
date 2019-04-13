@@ -2,7 +2,7 @@ package com.api.revolut.dao;
 
 
 import com.api.revolut.exception.DAOException;
-import com.api.revolut.objectModel.Account;
+import com.api.revolut.model.Account;
 import org.junit.After;
 import org.junit.BeforeClass;
 import org.junit.Test;

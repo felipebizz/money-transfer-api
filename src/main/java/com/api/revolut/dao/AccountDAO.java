@@ -1,8 +1,8 @@
 package com.api.revolut.dao;
 
 import com.api.revolut.exception.DAOException;
-import com.api.revolut.objectModel.Account;
-import com.api.revolut.objectModel.UserTransaction;
+import com.api.revolut.model.Account;
+import com.api.revolut.model.UserTransaction;
 
 import java.math.BigDecimal;
 import java.util.List;

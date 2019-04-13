@@ -1,6 +1,6 @@
 package com.api.revolut.services;
 
-import com.api.revolut.objectModel.User;
+import com.api.revolut.model.User;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.client.methods.HttpGet;

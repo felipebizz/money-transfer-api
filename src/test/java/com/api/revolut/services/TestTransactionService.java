@@ -1,8 +1,8 @@
 package com.api.revolut.services;
 
 
-import com.api.revolut.objectModel.Account;
-import com.api.revolut.objectModel.UserTransaction;
+import com.api.revolut.model.Account;
+import com.api.revolut.model.UserTransaction;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpPut;
