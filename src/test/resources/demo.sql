@@ -24,7 +24,7 @@ CREATE UNIQUE INDEX idx_acc on Account(UserName,CurrencyCode);
 
 INSERT INTO Account (UserName,Balance,CurrencyCode) VALUES ('felipebizz',100.0000,'USD');
 INSERT INTO Account (UserName,Balance,CurrencyCode) VALUES ('luhanna',200.0000,'USD');
-INSERT INTO Account (UserName,Balance,CurrencyCode) VALUES ('felipebizz',500.0000,'EUR');
-INSERT INTO Account (UserName,Balance,CurrencyCode) VALUES ('luhanna',500.0000,'EUR');
-INSERT INTO Account (UserName,Balance,CurrencyCode) VALUES ('felipebizz',500.0000,'GBP');
-INSERT INTO Account (UserName,Balance,CurrencyCode) VALUES ('luhanna',500.0000,'GBP');
+INSERT INTO Account (UserName,Balance,CurrencyCode) VALUES ('mary',500.0000,'EUR');
+INSERT INTO Account (UserName,Balance,CurrencyCode) VALUES ('morgan',500.0000,'EUR');
+INSERT INTO Account (UserName,Balance,CurrencyCode) VALUES ('jack',500.0000,'GBP');
+INSERT INTO Account (UserName,Balance,CurrencyCode) VALUES ('peter',500.0000,'GBP');
