@@ -60,8 +60,10 @@ public class TestAccountBalance {
         log.debug("Account From: " + accountTo);
 
 
-        assertTrue(accountFrom.getBalance().compareTo(new BigDecimal(449.9877).setScale(4, RoundingMode.HALF_EVEN)) == 0);
-        assertTrue(accountTo.getBalance().equals(new BigDecimal(550.0123).setScale(4, RoundingMode.HALF_EVEN)));
+        assertTrue(accountFrom.getBalance()
+                .compareTo(new BigDecimal(449.9877).setScale(4, RoundingMode.HALF_EVEN)) == 0);
+        assertTrue(accountTo.getBalance()
+                .equals(new BigDecimal(550.0123).setScale(4, RoundingMode.HALF_EVEN)));
     }
 
 
@@ -76,7 +78,8 @@ public class TestAccountBalance {
                 @Override
                 public void run() {
                     try {
-                        UserTransaction transaction = new UserTransaction("USD", new BigDecimal(2).setScale(4, RoundingMode.HALF_EVEN), 1L, 2L);
+                        UserTransaction transaction = new UserTransaction("USD", new BigDecimal(2)
+                                .setScale(4, RoundingMode.HALF_EVEN), 1L, 2L);
                         accountDAO.transferAccountBalance(transaction);
                     } catch (Exception e) {
                         log.error("Error occurred during transfer ", e);
@@ -117,7 +120,8 @@ public class TestAccountBalance {
             lockStmt = conn.prepareStatement(SQL_LOCK_ACC);
             rs = lockStmt.executeQuery();
             if (rs.next()) {
-                fromAccount = new Account(rs.getLong("AccountId"), rs.getString("UserName"), rs.getBigDecimal("Balance"), rs.getString("CurrencyCode"));
+                fromAccount = new Account(rs.getLong("AccountId"), rs.getString("UserName"),
+                        rs.getBigDecimal("Balance"), rs.getString("CurrencyCode"));
                 if (log.isDebugEnabled())
                     log.debug("Locked Account: " + fromAccount);
             }

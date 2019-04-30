@@ -19,10 +19,10 @@ import java.sql.SQLException;
  */
 public class H2DAOFactory extends DAOFactory {
 
-    private static final String h2_driver = PropertiesUtil.getStringProperty("h2_driver");
-    private static final String h2_connection_url = PropertiesUtil.getStringProperty("h2_connection_url");
-    private static final String h2_user = PropertiesUtil.getStringProperty("h2_user");
-    private static final String h2_password = PropertiesUtil.getStringProperty("h2_password");
+    private static final String H_2_DRIVER = PropertiesUtil.getStringProperty("h2_driver");
+    private static final String H_2_CONNECTION_URL = PropertiesUtil.getStringProperty("h2_connection_url");
+    private static final String H_2_USER = PropertiesUtil.getStringProperty("h2_user");
+    private static final String H_2_PASSWORD = PropertiesUtil.getStringProperty("h2_password");
     private static Logger log = Logger.getLogger(H2DAOFactory.class);
 
     private final UserDAOImpl userDAO = new UserDAOImpl();
@@ -30,11 +30,11 @@ public class H2DAOFactory extends DAOFactory {
 
     H2DAOFactory() {
         //init: load driver
-        DbUtils.loadDriver(h2_driver);
+        DbUtils.loadDriver(H_2_DRIVER);
     }
 
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(h2_connection_url, h2_user, h2_password);
+        return DriverManager.getConnection(H_2_CONNECTION_URL, H_2_USER, H_2_PASSWORD);
 
     }
 

@@ -259,9 +259,7 @@ public class AccountDAOImpl implements AccountDAO {
                 throw new DAOException("Fail to rollback transaction", re);
             }
         } finally {
-            DbUtils.closeQuietly(conn);
-            DbUtils.closeQuietly(rs);
-            DbUtils.closeQuietly(lockStmt);
+            DbUtils.closeQuietly(conn, lockStmt, rs);
             DbUtils.closeQuietly(updateStmt);
         }
         return result;

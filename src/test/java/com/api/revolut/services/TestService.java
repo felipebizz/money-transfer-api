@@ -35,7 +35,6 @@ public abstract class TestService {
                 .setConnectionManager(connManager)
                 .setConnectionManagerShared(true)
                 .build();
-
     }
 
     @AfterClass
