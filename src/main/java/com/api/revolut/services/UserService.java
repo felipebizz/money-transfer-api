@@ -14,9 +14,8 @@ import java.util.List;
 @Path("/revolut-app/user")
 @Produces(MediaType.APPLICATION_JSON)
 public class UserService {
-    private final DAOFactory daoFactory = DAOFactory.getDAOFactory(DAOFactory.H2);
     private static Logger log = Logger.getLogger(UserService.class);
-
+    private final DAOFactory daoFactory = DAOFactory.getDAOFactory(DAOFactory.H2);
 
     @GET
     @Path("/{userName}")

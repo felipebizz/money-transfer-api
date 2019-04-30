@@ -18,7 +18,6 @@ public interface AccountDAO {
 
     int deleteAccountById(long accountId) throws DAOException;
 
-
     int updateAccountBalance(long accountId, BigDecimal deltaAmount) throws DAOException;
 
     int transferAccountBalance(UserTransaction userTransaction) throws DAOException;

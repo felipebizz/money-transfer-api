@@ -19,13 +19,13 @@ import java.util.List;
 
 
 public class AccountDAOImpl implements AccountDAO {
-    private static Logger log = Logger.getLogger(AccountDAOImpl.class);
     private final static String SQL_GET_ACC_BY_ID = "SELECT * FROM Account WHERE AccountId = ? ";
     private final static String SQL_LOCK_ACC_BY_ID = "SELECT * FROM Account WHERE AccountId = ? FOR UPDATE";
     private final static String SQL_CREATE_ACC = "INSERT INTO Account (UserName, Balance, CurrencyCode) VALUES (?, ?, ?)";
     private final static String SQL_UPDATE_ACC_BALANCE = "UPDATE Account SET Balance = ? WHERE AccountId = ? ";
     private final static String SQL_GET_ALL_ACC = "SELECT * FROM Account";
     private final static String SQL_DELETE_ACC_BY_ID = "DELETE FROM Account WHERE AccountId = ?";
+    private static Logger log = Logger.getLogger(AccountDAOImpl.class);
 
     public List<Account> getAllAccounts() throws DAOException {
         Connection conn = null;

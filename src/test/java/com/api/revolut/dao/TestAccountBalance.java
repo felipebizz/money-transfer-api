@@ -21,9 +21,9 @@ import static junit.framework.TestCase.assertTrue;
 
 public class TestAccountBalance {
 
-    private static Logger log = Logger.getLogger(TestAccountDAO.class);
     private static final DAOFactory h2DaoFactory = DAOFactory.getDAOFactory(DAOFactory.H2);
     private static final int THREADS_COUNT = 100;
+    private static Logger log = Logger.getLogger(TestAccountDAO.class);
 
     @BeforeClass
     public static void setup() {
@@ -32,7 +32,8 @@ public class TestAccountBalance {
     }
 
     @After
-    public void tearDown() {}
+    public void tearDown() {
+    }
 
     @Test
     public void testAccountSingleThreadSameCcyTransfer() throws DAOException {

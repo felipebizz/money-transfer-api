@@ -13,13 +13,13 @@ import java.util.List;
 
 
 public class UserDAOImpl implements UserDAO {
-    private static Logger log = Logger.getLogger(UserDAOImpl.class);
     private final static String SQL_GET_USER_BY_ID = "SELECT * FROM User WHERE UserId = ? ";
     private final static String SQL_GET_ALL_USERS = "SELECT * FROM User";
     private final static String SQL_GET_USER_BY_NAME = "SELECT * FROM User WHERE UserName = ? ";
     private final static String SQL_INSERT_USER = "INSERT INTO User (UserName, EmailAddress) VALUES (?, ?)";
     private final static String SQL_UPDATE_USER = "UPDATE User SET UserName = ?, EmailAddress = ? WHERE UserId = ? ";
     private final static String SQL_DELETE_USER_BY_ID = "DELETE FROM User WHERE UserId = ? ";
+    private static Logger log = Logger.getLogger(UserDAOImpl.class);
 
     public List<User> getAllUsers() throws DAOException {
         Connection conn = null;

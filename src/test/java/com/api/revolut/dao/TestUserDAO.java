@@ -13,9 +13,9 @@ import static junit.framework.TestCase.assertTrue;
 
 
 public class TestUserDAO {
-    private static Logger log = Logger.getLogger(TestUserDAO.class);
     private static final DAOFactory h2DaoFactory =
             DAOFactory.getDAOFactory(DAOFactory.H2);
+    private static Logger log = Logger.getLogger(TestUserDAO.class);
 
     @BeforeClass
     public static void setup() {

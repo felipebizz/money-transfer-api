@@ -17,8 +17,8 @@ import javax.ws.rs.core.Response;
 @Path("/revolut-app/transaction")
 @Produces(MediaType.APPLICATION_JSON)
 public class TransactionService {
-    private final DAOFactory daoFactory = DAOFactory.getDAOFactory(DAOFactory.H2);
     private static Logger log = Logger.getLogger(TransactionService.class);
+    private final DAOFactory daoFactory = DAOFactory.getDAOFactory(DAOFactory.H2);
 
     @POST
     public Response transferFund(UserTransaction transaction) throws DAOException {

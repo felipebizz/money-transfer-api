@@ -12,11 +12,9 @@ import java.util.Currency;
 public enum MoneyUtil {
     INSTANCE;
 
-    static Logger log = Logger.getLogger(MoneyUtil.class);
-
     //zero amount with scale 4 and financial rounding mode
     public static final BigDecimal zeroAmount = new BigDecimal(0).setScale(4, RoundingMode.HALF_EVEN);
-
+    static Logger log = Logger.getLogger(MoneyUtil.class);
 
     /**
      * @param inputCcyCode String Currency code to be validated

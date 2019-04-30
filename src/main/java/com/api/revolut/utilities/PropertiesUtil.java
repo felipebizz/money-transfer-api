@@ -10,9 +10,18 @@ import java.util.Properties;
 
 public class PropertiesUtil {
 
+    static Logger log = Logger.getLogger(PropertiesUtil.class);
     private static Properties properties = new Properties();
 
-    static Logger log = Logger.getLogger(PropertiesUtil.class);
+    static {
+        String configFileName = System.getProperty("revolut.properties");
+
+        if (configFileName == null) {
+            configFileName = "revolut.properties";
+        }
+        loadConfig(configFileName);
+
+    }
 
     public static void loadConfig(String fileName) {
         if (fileName == null) {
@@ -32,7 +41,6 @@ public class PropertiesUtil {
 
     }
 
-
     public static String getStringProperty(String key) {
         String value = properties.getProperty(key);
         if (value == null) {
@@ -51,7 +59,6 @@ public class PropertiesUtil {
         return value != null ? value : defaultVal;
     }
 
-
     public static int getIntegerProperty(String key, int defaultVal) {
         String valueStr = getStringProperty(key);
         if (valueStr == null) {
@@ -65,18 +72,6 @@ public class PropertiesUtil {
                 return defaultVal;
             }
         }
-    }
-
-    //initialise
-
-    static {
-        String configFileName = System.getProperty("revolut.properties");
-
-        if (configFileName == null) {
-            configFileName = "revolut.properties";
-        }
-        loadConfig(configFileName);
-
     }
 
 
